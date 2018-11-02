@@ -1,0 +1,38 @@
+# http://www.linux.com/news/enterprise/systems-management/785426-a-template-for-monitoring-linux-performance-tools-like-from-netflix-
+# Observability: Basic
+uptime
+top
+htop
+atop
+ps -ef f
+vmstat -Sm 1
+iostat -xmdz 1
+mpstat -P ALL 1
+free -m
+
+# Observability: Intermediate
+sudo strace -tttT -p 22896
+sudo tcpdump -i eth0 -w /tmp/out.tcpdump
+sudo tcpdump -nr /tmp/out.tcpdump | head
+netstat -s
+netstat -p -c
+nicstat 1
+pidstat -t 1
+pidstat -d 1
+swapon -s
+sar -n TCP,ETCP,DEV 1
+
+# Observability: Advanced
+ss -mop
+ss -i
+sudo iotop
+sudo slabtop
+sudo perf top
+
+# Benchmark
+fio --name=seqwrite --rw=write --bs=128k --size=5237m
+
+# Tracing
+sudo perf record -e skb:consume_skb -ag
+sudo perf report
+sudo perf trace

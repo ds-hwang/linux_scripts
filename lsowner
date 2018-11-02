@@ -1,0 +1,1 @@
+grep -v "@ch" `find -name "OWNERS"` |  grep "\w@\w" | grep -v "google" | grep -v "webrtc"

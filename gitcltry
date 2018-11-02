@@ -1,0 +1,11 @@
+# depot-tools-auth login https://codereview.chromium.org
+#mv ~/.codereview_upload_cookies ~/.codereview_upload_cookies.intel
+#mv ~/.codereview_upload_cookies.chromium ~/.codereview_upload_cookies
+mv ~/.depot_tools_oauth2_tokens ~/.depot_tools_oauth2_tokens.intel
+mv ~/.depot_tools_oauth2_tokens.chromium ~/.depot_tools_oauth2_tokens
+git cl try $@
+#mv ~/.codereview_upload_cookies ~/.codereview_upload_cookies.chromium
+#mv ~/.codereview_upload_cookies.intel ~/.codereview_upload_cookies
+mv ~/.depot_tools_oauth2_tokens ~/.depot_tools_oauth2_tokens.chromium
+mv ~/.depot_tools_oauth2_tokens.intel ~/.depot_tools_oauth2_tokens
+

@@ -1,0 +1,4 @@
+#git log --format=format:"%an" 5dedb5aca.. | grep intel.com | sort | uniq -c | sort -n -r
+#git log --format=format:"%an" 5dedb5aca.. | grep "\(intel\|samsung\)" | sort | uniq -c | sort -n -r | head -n 39
+#git log --format=format:"%an" 5dedb5aca.. | grep -v "\(google\|chromium\)" | sort | uniq -c | sort -n -r | head -n 54
+git log --format=format:"%an" --since="2014-01-01" | grep -v "\(google\|chromium\)" | sort | uniq -c | sort -n -r | head -n 54

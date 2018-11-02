@@ -1,0 +1,57 @@
+[core]
+	#gitproxy = /home/dshwang/bin/socks-gw
+	whitepace=fix,-index-with-non-tab,trailing-space,cr-at-eol
+	editor = vim
+	filemode = false
+	autocrlf = false
+	deltaBaseCacheLimit = 1G
+[color]
+	branch=auto
+	diff=auto
+	status=auto
+[color "branch"]
+	current=yellow reverse
+	local=yellow
+	remote=green
+[color "diff"]
+	meta=yellow bold
+	frag=blue bold
+	old=red bold
+	new=green bold
+[color "status"]
+	added=yellow
+	changed=green
+	untracked=cyan
+[color]
+	ui=true
+[alias]
+        b = branch
+        ba = branch -a
+        st = status
+        co = checkout
+        cp = cherry-pick
+        l = log --decorate=short --stat
+[merge]
+	tool = meld
+[mergetool "meld"]
+	path = /usr/bin/meld
+	keepBackup = false
+	trustExitCode = false
+[difftool]
+    prompt = false
+[user]
+	email = dongseong.hwang@intel.com
+	name = Dongseong Hwang 
+[bugzilla]
+	username = dongseong.hwang@intel.com
+
+[http]
+	cookiefile = /home/dshwang/.gitcookies
+[push]
+	default = matching
+[sendemail]
+	from="Dongseong Hwang <dongseong.hwang@intel.com>"
+	chainreplyto = false
+	smtpserver = smtp.intel.com
+	smtpserverport = 25
+	envelopesender = dongseong.hwang@intel.com

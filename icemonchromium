@@ -1,0 +1,2 @@
+#USE_SCHEDULER="10.7.197.80" icemon -nchromium
+USE_SCHEDULER="joone-foss.jf.intel.com" icemon -nchromium-joone

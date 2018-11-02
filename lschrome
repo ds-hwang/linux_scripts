@@ -1,0 +1,5 @@
+#git log --format=format:"%an" | grep intel.com | sort | uniq -c | sort -n -r | head -n 39
+#git log --format=format:"%an" | grep -v "\(google\|chromium\|gitdeps\)" | sort | uniq -c | sort -n -r | head -n 54
+#git log --author=dongseong --format=format:"%an" --since="2013-01-01" | wc
+#git log --format=format:"%ad %ae" --date=short --since="2014-01-01" | sed "s/\(\w* [^@]*\)@\([^@]*\)@*.*/\1@\2/" | sed "s/\(\w\w\w\w-\w\w\)-\w\w \([^@]*\)@\([^.]*\)\..*/\1 \3/" | grep -v "\(google\|chromium\|gitdeps\)" | sort | uniq -c
+git log --format=format:"%ae" --since="2014-01-01" | sed "s/\([^@]*\)@\([^@]*\)\(@.*\)/\1@\2/" | grep -v "\(google\|chromium\|gitdeps\)" | sort | uniq -c | sort -n -r | head -n 54

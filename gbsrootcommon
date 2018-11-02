@@ -1,0 +1,2 @@
+sudo gbs chroot /home/dshwang/GBS-ROOT-common/local/BUILD-ROOTS/scratch.x86_64.0
+#sudo mount --bind /home/dshwang/workspace/xwalk /home/dshwang/GBS-ROOT-common/local/BUILD-ROOTS/scratch.x86_64.0/home/abuild/workspace/xwalk
